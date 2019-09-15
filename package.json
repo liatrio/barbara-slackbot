@@ -1,0 +1,30 @@
+{
+  "name": "barbara-slackbot",
+  "version": "0.1.0",
+  "description": "A Slackbot designed to help automate a Liatrio style technical exercise.",
+  "main": "bolt.js",
+  "scripts": {
+    "dev": "nodemon bolt.js",
+    "lint": "eslint",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/liatrio/barbara-slackbot.git"
+  },
+  "author": "Justin Bankes",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/liatrio/barbara-slackbot/issues"
+  },
+  "homepage": "https://github.com/liatrio/barbara-slackbot#readme",
+  "dependencies": {
+    "@slack/bolt": "^1.2.0"
+  },
+  "devDependencies": {
+    "eslint": "^6.4.0",
+    "eslint-config-airbnb-base": "^14.0.0",
+    "eslint-plugin-import": "^2.18.2",
+    "nodemon": "^1.19.2"
+  }
+}
