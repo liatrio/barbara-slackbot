@@ -9,7 +9,7 @@ if (process.env.DEV_ENV == 'dev-smee') {
     target: 'http://localhost:'+ (process.env.PORT || 3000) + '/slack/events',
     logger: console
   })
-  const events = smee.start()
+  smee.start()
 }
 
 const app = new App({
