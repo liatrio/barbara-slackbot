@@ -1,5 +1,17 @@
 const { App } = require('@slack/bolt');
 
+if (process.env.DEV_ENV == 'dev-smee') {
+  require('dotenv').config();
+  const SmeeClient = require('smee-client')
+
+  const smee = new SmeeClient({
+    source: process.env.SMEE_WEBHOOK_URL,
+    target: 'http://localhost:'+ (process.env.PORT || 3000) + '/slack/events',
+    logger: console
+  })
+  const events = smee.start()
+}
+
 const app = new App({
   token: process.env.SLACK_BOT_TOKEN,
   signingSecret: process.env.SLACK_SIGNING_SECRET,
