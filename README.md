@@ -21,6 +21,11 @@ We will be using ESLint with AirBnB style guidelines being enforced.
 3. Update Request URLs for Slack app. Use the https url and don't forget to append `/slack/events` to the URL.
   1. Event Subscriptions 
   2. Interactive Components
+4. You must _Subscribe to Bot Events_ under _Event Subscriptions_. Add the following:
+  1. `message.channels`
+  2. `message.groups`
+  3. `message.im`
+  4. `message.mpim`
 
 _Note: You will have to update the URL's everytime you restart ngrok_
 
