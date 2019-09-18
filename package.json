@@ -4,7 +4,7 @@
   "description": "A Slackbot designed to help automate a Liatrio style technical exercise.",
   "main": "bolt.js",
   "scripts": {
-    "dev": "nodemon bolt.js",
+    "dev": "nodemon -r dotenv/config bolt.js",
     "lint": "eslint",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
@@ -25,6 +25,7 @@
     "eslint": "^6.4.0",
     "eslint-config-airbnb-base": "^14.0.0",
     "eslint-plugin-import": "^2.18.2",
-    "nodemon": "^1.19.2"
+    "nodemon": "^1.19.2",
+    "dotenv": "8.0.0"
   }
 }
