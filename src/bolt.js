@@ -32,8 +32,9 @@ app.action('button_click', ({ body, ack, say }) => {
   say(`<@${body.user.id}> clicked the button`);
 });
 
-(async () => {
-  await app.start(process.env.PORT || 3000);
+app.message(/^create interview for [a-zA-Z]+(([',. -][a-zA-Z ])?[a-zA-Z]*)+/, ({ context }) => {
+  const applicantName = context.matches[0].replace('create interview for ', '');
+  console.log(applicantName);
+});
 
-  console.log('⚡️ Bolt app is running!');
-})();
+module.exports = app;
